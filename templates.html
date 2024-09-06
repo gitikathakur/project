@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faqs.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/templates.css">
+</head>
+
+<body>
+    <div class="texxxt">
+        <div>
+            <div class="navbar">
+
+                <a href="RE.html"><button class="login1">Log in</button></a> 
+                <a href="SignUp.html"><button class="signup1">Sign up</button></a> 
+            <div class="header">
+              <div class="header-left">
+                <a class="active" href="index.html">Home</a>
+                <a href="#explore">Explore</a>
+                <a href="templates.html" class="active2">Templates</a>
+                <h1 class="REmake">REmake</h1>
+              </div>
+            
+            </div>
+</div>
+    <div class="title-temp">    <h1 class="heading">Templates to win recruiters over</h1>
+    <p style="margin-left: 800px;
+    margin-top: 20px;">Wide selection of designs. Carefully optimised for clarity and impact.</p>
+    </div></div>
+      <div class="card-list">
+        <div class="card-container">
+
+            <div class="card">
+                <img src="images/a1.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a7.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a3.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a4.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a5.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a6.jpeg" class="card-img" alt="">
+            </div>
+
+        </div>
+    </div>
+
+      <div class="card-list">
+        <div class="card-container">
+
+            <div class="card">
+                <img src="images/a11.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/7.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a10.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a8.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a9.jpeg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/a2.jpeg" class="card-img" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="about-me">
+        <div class="about-content">
+         <div class="footer">
+<div class="footer-left">
+ <a class="active" href="index.html".html">Home</a>
+ <a href="templates.html">Templates</a>
+ <a href="#contact">Contact Us</a>
+</div></div>
+         <div class="about-container">
+             <p class="disclaimer-before1">REmake</p>
+             <p class="disclaimer-before2">Using REmake’s free resume creator, it's simple and quick to apply for your dream job. Choose from hundreds of free,
+professionally designed templates and customize them .</p>
+<br><hr><br><br><br>
+              <!-- <p class="btn-title">Contact Us</p>  -->
+             <a href="https://www.facebook.com/BMLMunjalUniversity/" target="_blank" class="btn">
+                 <i class="fab fa-facebook-f"><img src="images/facebook.png" class="img1" alt=""></i> 
+             </a>
+             <a href="https://twitter.com/bmluniv?lang=en" target="_blank" class="btn">
+                 <i class="fab fa-twitter"><img src="images/tweetbird.png" class="img2" alt=""></i> 
+             </a>
+             <a href="https://www.instagram.com/bmlmunjaluniversity/" target="_blank" class="btn">
+                 <i class="fab fa-instagram"><img src="images/instagram.png" alt="" class="img3"></i> 
+             </a>
+
+             <p class="disclaimer">Copyright 2022. All Rights Reserved.</p>
+             
+         </div>
+         <div>
+             <p class="contacts">About Us</p>
+         </div>
+
+         <div>
+             
+         </div>
+
+     </div>
+</body>
+<script>
+    const slideGallery = document.querySelector('.slides');
+const slides = slideGallery.querySelectorAll('div');
+const thumbnailContainer = document.querySelector('.thumbnails');
+const slideCount = slides.length;
+const slideWidth = 540;
+
+const highlightThumbnail = () => {
+  thumbnailContainer
+    .querySelectorAll('div.highlighted')
+    .forEach(el => el.classList.remove('highlighted'));
+  const index = Math.floor(slideGallery.scrollLeft / slideWidth);
+  thumbnailContainer
+    .querySelector(`div[data-id="${index}"]`)
+    .classList.add('highlighted');
+};
+
+const scrollToElement = el => {
+  const index = parseInt(el.dataset.id, 10);
+  slideGallery.scrollTo(index * slideWidth, 0);
+};
+
+thumbnailContainer.innerHTML += [...slides]
+  .map((slide, i) => `<div data-id="${i}"></div>`)
+  .join('');
+
+thumbnailContainer.querySelectorAll('div').forEach(el => {
+  el.addEventListener('click', () => scrollToElement(el));
+});
+
+slideGallery.addEventListener('scroll', e => highlightThumbnail());
+
+highlightThumbnail();
+</script>
+</html>
